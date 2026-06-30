@@ -21,7 +21,7 @@
 -- *****************************************************************************
 -- Generated on "06/26/2026 22:19:35"
                                                              
--- Vhdl Test Bench(with test vectors) for design  :          full_adder
+-- Vhdl Test Bench(with test vectors) for design  :          rc_adder
 -- 
 -- Simulation tool : 3rd Party
 -- 
@@ -29,16 +29,16 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY full_adder_vhd_vec_tst IS
-END full_adder_vhd_vec_tst;
-ARCHITECTURE full_adder_arch OF full_adder_vhd_vec_tst IS
+ENTITY rc_adder_vhd_vec_tst IS
+END rc_adder_vhd_vec_tst;
+ARCHITECTURE rc_adder_arch OF rc_adder_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
 SIGNAL A : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL B : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL CARRY : STD_LOGIC;
 SIGNAL SUM : STD_LOGIC_VECTOR(7 DOWNTO 0);
-COMPONENT full_adder
+COMPONENT rc_adder
 	PORT (
 	A : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
 	B : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
@@ -47,7 +47,7 @@ COMPONENT full_adder
 	);
 END COMPONENT;
 BEGIN
-	i1 : full_adder
+	i1 : rc_adder
 	PORT MAP (
 -- list connections between master ports and signals
 	A => A,
@@ -443,4 +443,4 @@ BEGIN
 	B(0) <= '0';
 WAIT;
 END PROCESS t_prcs_B_0;
-END full_adder_arch;
+END rc_adder_arch;

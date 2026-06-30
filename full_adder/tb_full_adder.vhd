@@ -1,10 +1,10 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity tb_half_adder is
+entity tb_full_adder is
 end entity;
 
-architecture sim of tb_half_adder is
+architecture sim of tb_full_adder is
 
 	-- Signals to connect to the DUT
 	signal a 	: std_logic := '0';
@@ -16,7 +16,7 @@ architecture sim of tb_half_adder is
 begin
 
 	-- Instantiate DUT (Device Under Test)
-	dut: entity work.half_adder
+	dut: entity work.full_adder
 		port map (
 			a 		=> a,
 			b 		=> b,
